@@ -42,5 +42,5 @@ app.use(express.static(__dirname + '/public'));
 require('./app/routes.js')(app);
 
 var listener = app.listen(process.env.PORT || 8080, function () {
-	console.log("Info: 'Lurpak Soundboard' listening on port " + listener.address().port + " in " + process.env.NODE_ENV + " mode.");
+	console.log("Info: '#METOO Counter' listening on port " + listener.address().port + " in " + process.env.NODE_ENV + " mode.");
 });
