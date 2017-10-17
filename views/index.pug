@@ -14,12 +14,17 @@ html
 		include html5shiv
 		
 		script(type="text/javascript",src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
+		script(type="text/javascript",src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")
 		script(type="text/javascript",src="/js/modernizr_mobile_detect.min.js")
+		script(type="text/javascript",src="/js/countUp.js")
 		script(type="text/javascript",src="/js/application.js")
 	body
 		section.container
 			section.container__inner
 		
-				section.content
-			
-					p test
+				section.count
+					section.count__holder
+						p#count__number 000000
+					
+					section.count__button
+		

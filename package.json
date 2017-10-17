@@ -30,7 +30,8 @@
     "errorhandler": "1.4.x",
     "morgan": "1.7.x",
     "dotenv": "2.x.x",
-    "body-parser": "1.15.1"
+    "body-parser": "1.15.1",
+    "socket.io": "2.0.x"
   },
   "domains": [
     ""

@@ -1,6 +1,36 @@
-var debug = false;
+var 	debug = false,
+		number_count;
+
+/* local */
+var socket = io.connect('http://localhost:8080');
+/* remote */
+//var socket = io.connect('https://me-too-count.herokuapp.com:8080');
+
+socket.on('connect', function(data) {
+	socket.emit('join', 'Hello World from client');
+});
 
 $(document).ready(function(){
+	var options = {
+		useEasing: true, 
+  		useGrouping: true, 
+  		separator: '', 
+  		decimal: '.', 
+	};
+	
+	socket.on('count_start', function(data) {
+		number_count = data;
+		
+		console.log(number_count);
+		
+		$('#count__number').html(number_count);
+/*
+		var numAnim = new CountUp("count__number", number_count, number_count - 100, 0, 1, options);
+		numAnim.start(function() {
+			numAnim.update(number_count);
+		});
+*/
+	})
 });
 
 //FIXING FOREACH IN IE8

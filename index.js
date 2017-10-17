@@ -6,9 +6,15 @@ var express 			= require('express')
 ,	morgan 				= require('morgan')
 ,   dotenv				= require('dotenv').config({silent: true})
 ,	body_parser			= require('body-parser').urlencoded({ extended: true })
-,	fs					= require('fs');
+,	fs					= require('fs')
+,	socket_io    		= require('socket.io');
 
 var app = express();
+var server = require('http').createServer(app);  
+var io = require('socket.io')(server);
+
+//
+var num = 300046;
 
 //Setup App
 if ('development' == app.get('env')) {
@@ -41,6 +47,19 @@ app.use(express.static(__dirname + '/public'));
 //Set up routes
 require('./app/routes.js')(app);
 
-var listener = app.listen(process.env.PORT || 8080, function () {
+io.on('connection', function(client) {
+	if ('development' == app.get('env')) {
+    	console.log('Client connected...');
+	}
+	
+    client.on('join', function(data) {
+	    if ('development' == app.get('env')) {
+        	console.log(data);
+		}
+		client.emit('count_start', num);
+	});
+});
+
+var listener = server.listen(process.env.PORT || 8080, function () {
 	console.log("Info: '#METOO Counter' listening on port " + listener.address().port + " in " + process.env.NODE_ENV + " mode.");
 });
