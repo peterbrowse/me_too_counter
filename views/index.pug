@@ -1,0 +1,17 @@
+include header
+
+	section.container
+		section.container__inner
+		
+			section.preloader.hide
+				img(src="/imgs/lurpak_logo.png", class="logo")
+			
+			section.soundboard
+				.button_holder
+					ul.buttons
+						- for (var i = 1; i < number_of_sounds + 1; ++i) {
+							- var id = "track_" + i	
+							li(id= id)= i
+						- }
+					
+				img(src="/imgs/lurpak_logo.png", class="logo") 		

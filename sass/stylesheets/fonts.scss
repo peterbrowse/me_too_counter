@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Conv_ClanOT-ExtdBook';
+	src: url('/fonts/ClanOT-ExtdBook.eot');
+	src: local('☺'), url('/fonts/ClanOT-ExtdBook.woff') format('woff'), url('/fonts/ClanOT-ExtdBook.ttf') format('truetype'), url('/fonts/ClanOT-ExtdBook.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'Conv_ClanOT-ExtdBook';
+}

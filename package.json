@@ -1,0 +1,38 @@
+{
+  "name": "me_too_counter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterbrowse/me_too_counter.git"
+  },
+  "author": "Peter Browse",
+  "license": "MIT",
+  "engines": {
+    "node": "4.1.1"
+  },
+  "config": {
+    "port": "8080"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+	"express": "4.x",
+	"node-sass": "3.8.x",
+	"node-sass-middleware": "0.9.x",
+	"pug": "2.0.0-alpha6",
+	"errorhandler": "1.4.x",
+	"morgan": "1.7.x",
+	"dotenv": "2.x.x",
+	"body-parser": "1.15.1"
+  },
+  "domains": [
+    ""
+  ]
+}

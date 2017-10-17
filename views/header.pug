@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title= title
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0")
+				
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		
+		link(href="favicon.ico", type="image/x-icon", rel="shortcut icon")
+		link(href="favicon.ico", rel="shortcut icon")
+		link(href="favicon.ico", type="image/x-icon", rel="icon")
+		
+		include html5shiv
+		
+		script(type="text/javascript",src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
+		script(type="text/javascript",src="/js/modernizr_mobile_detect.min.js")
+		script(type="text/javascript",src="/js/pxloader-all.min.js")
+		script(type="text/javascript",src="/js/soundmanager2-jsmin.js")
+		script(type='text/javascript').
+			var number_of_songs = !{number_of_sounds};
+		script(type="text/javascript",src="/js/application.js")
+	body
