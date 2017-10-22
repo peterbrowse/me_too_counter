@@ -4,7 +4,7 @@ var 	debug = false,
 /* local */
 //var socket = io.connect('http://localhost:8080');
 /* remote */
-var socket = io.connect('https://me-too-count.herokuapp.com:8080');
+var socket = io.connect('http://metoothreefour.com:8080');
 
 socket.on('connect', function(data) {
 	socket.emit('join', 'Hello World from client');
