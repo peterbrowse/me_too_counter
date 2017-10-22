@@ -7,9 +7,19 @@ html
 				
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		
-		link(href="favicon.ico", type="image/x-icon", rel="shortcut icon")
-		link(href="favicon.ico", rel="shortcut icon")
-		link(href="favicon.ico", type="image/x-icon", rel="icon")
+		link(rel="apple-touch-icon" sizes="57x57" href="imgs/apple-icon-57x57.png")
+		link(rel="apple-touch-icon" sizes="60x60" href="imgs/apple-icon-60x60.png")
+		link(rel="apple-touch-icon" sizes="72x72" href="imgs/apple-icon-72x72.png")
+		link(rel="apple-touch-icon" sizes="76x76" href="imgs/apple-icon-76x76.png")
+		link(rel="apple-touch-icon" sizes="114x114" href="imgs/apple-icon-114x114.png")
+		link(rel="apple-touch-icon" sizes="120x120" href="imgs/apple-icon-120x120.png")
+		link(rel="apple-touch-icon" sizes="144x144" href="imgs/apple-icon-144x144.png")
+		link(rel="apple-touch-icon" sizes="152x152" href="imgs/apple-icon-152x152.png")
+		link(rel="apple-touch-icon" sizes="180x180" href="imgs/apple-icon-180x180.png")
+		link(rel="icon" type="image/png" sizes="192x192"  href="imgs/android-icon-192x192.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="96x96" href="imgs/favicon-96x96.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png")
 		
 		include html5shiv
 		
@@ -17,14 +27,39 @@ html
 		script(type="text/javascript",src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")
 		script(type="text/javascript",src="/js/modernizr_mobile_detect.min.js")
 		script(type="text/javascript",src="/js/countUp.js")
+		script(type="text/javascript",src="/js/js.cookie.js")
 		script(type="text/javascript",src="/js/application.js")
 	body
 		section.container
 			section.container__inner
 		
 				section.count
+					section.count__copy
+						p We can’t even begin to count how many of our friends, family members, coworkers, girls-met-in-nightclub-toilets, school lollipop ladies, or mum’s mates have said #metoo.<br />It’s flooding our feeds. It’s making our eyeballs flood too.
+						
+						p It’s a damn shame.<br />Even us women had no idea the problem was this huge. But it’s frickin huge. HUGE.<br />And at the moment we can only see it through women who feel comfortable using the hashtag. We want to give all women a voice, anonymously.<br/>(Shoutout to not wanting to share that with your boss & the kid you babysit)
+						
+						p We need to put this monster of a number in one place.<br />And we don’t want it to disappear or get lost in your feeds.
+
+						p Help us show how big this is.<br />Big in size, big in importance, big in typeface.<br />Srsly, look how big we’ve made it down there.<br />Please click below if you identify as a woman and would like to be counted as a human being that has been sexually harassed or assaulted.
+
+						p (It’s all anonymous. We got you ✌️.)<br />P.s We know there’s a *mega* flaw because anybody can click this button. We’re counting on your honesty.
+
+				
 					section.count__holder
-						p#count__number 000000
+						p#count__number 0
 					
 					section.count__button
+						p#count__button_copy Say #metoo too.
+			
+			section.container__inner.sub
+			
+				section.count
+					p test
+	
+	footer
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108479306-1"></script>
+		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-108479306-1');</script>
+
 		

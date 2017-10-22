@@ -1,8 +1,9 @@
 //version: 0.0.8
 
-$bg-color: #ffffff;
-
-$first-color: #ffffff;
+$first-color: #7dfab2;
+$second-color: #ee8ad4;
+$third-color: #ffffff;
+$off-color: #c867af;
 
 //TEXT
 $font-colour: $first-color;
@@ -16,9 +17,42 @@ $outter-spacing: 20px;
 @import 'mixins';
 
 html, body {
-	background-color: $bg-color;
+	background-color: $first-color;
 }
 
-section {
+section.container {
+	width: 100%;
 	
+	.container__inner {
+		#count__button_copy.off{
+			background-color: $off-color;
+			-webkit-transition: background-color 300ms linear;
+			-ms-transition: background-color 300ms linear;
+			transition: background-color 300ms linear;
+			cursor: default;
+		}
+		
+		#count__button_copy {
+			display: inline-block;
+			margin: auto;
+			padding: $outter-spacing;
+			background-color: $second-color;
+			color: $third-color;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+            user-select: none;
+		}
+	}
+	
+	.container__inner.sub {
+		background-color: $second-color;
+	}
+	
+	.count {
+		margin: $outter-spacing;
+	}
 }

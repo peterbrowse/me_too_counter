@@ -1,5 +1,5 @@
 var 	debug = false,
-		number_count;
+		number_count = 0;
 
 /* local */
 var socket = io.connect('http://localhost:8080');
@@ -14,23 +14,41 @@ $(document).ready(function(){
 	var options = {
 		useEasing: true, 
   		useGrouping: true, 
-  		separator: '', 
+  		separator: ',', 
   		decimal: '.', 
 	};
 	
+	var numAnim = new CountUp("count__number", number_count, number_count, 0, 1, options);
+	
 	socket.on('count_start', function(data) {
+		number_count = data;
+
+		numAnim.start(function() {
+			numAnim.update(number_count);
+		});
+	});
+	
+	socket.on('count_accepted', function(){
+		//button
+		Cookies.set('has_user_clicked', true);
+	});
+	
+	socket.on('count_updated', function(data) {
 		number_count = data;
 		
 		console.log(number_count);
 		
-		$('#count__number').html(number_count);
-/*
-		var numAnim = new CountUp("count__number", number_count, number_count - 100, 0, 1, options);
-		numAnim.start(function() {
-			numAnim.update(number_count);
-		});
-*/
-	})
+		numAnim.update(number_count);
+	});
+	
+	$('#count__button_copy').on('click', function(){
+		socket.emit('button_pressed');
+		$('#count__button_copy').off('click').text("Thank you.").addClass('off');
+	});
+	
+	if(Cookies.get('has_user_clicked')) {
+		$('#count__button_copy').text("Thank you.").addClass('off').off('click');
+	}
 });
 
 //FIXING FOREACH IN IE8
