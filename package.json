@@ -13,7 +13,7 @@
   "author": "Peter Browse",
   "license": "MIT",
   "engines": {
-    "node": "4.1.1"
+    "node": "8.7.0"
   },
   "config": {
     "port": "8080"
