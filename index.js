@@ -121,6 +121,6 @@ io.on('connection', function(client) {
 	});
 });
 
-var listener = server.listen(process.env.PORT || 8080, function () {
+var listener = server.listen(process.env.PORT || 3000, function () {
 	console.log("Info: '#METOO Counter' listening on port " + listener.address().port + " in " + process.env.NODE_ENV + " mode.");
 });

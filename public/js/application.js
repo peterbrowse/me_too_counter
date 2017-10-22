@@ -1,16 +1,11 @@
 var 	debug = false,
 		number_count = 0;
 
-/* local */
-//var socket = io.connect('http://localhost:8080');
-/* remote */
-var socket = io.connect('http://metoothreefour.com:8080');
-
-socket.on('connect', function(data) {
-	socket.emit('join', 'Hello World from client');
-});
-
 $(document).ready(function(){
+	socket.on('connect', function(data) {
+		socket.emit('join', 'Hello World from client');
+	});
+	
 	var options = {
 		useEasing: true, 
   		useGrouping: true, 

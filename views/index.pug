@@ -47,6 +47,8 @@ html
 		script(type="text/javascript",src="/js/countUp.js")
 		script(type="text/javascript",src="/js/js.cookie.js")
 		script(type="text/javascript",src="/js/application.js")
+		script.
+			var socket = io.connect('#{socket_route}');
 	body
 		section.container
 			section.container__inner
