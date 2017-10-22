@@ -7,7 +7,7 @@ module.exports = function(app) {
 	var port = normalizePort(process.env.PORT || '3000');
 	
 	if ('production' == app.get('env')) {
-		socket_route = 'http://metoothreefour.com:' + port;
+		socket_route = 'http://metoothreefour.com:' + 80;
 	} else {
 		socket_route = 'http://localhost:' + port;
 	}
