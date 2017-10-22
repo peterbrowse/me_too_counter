@@ -31,8 +31,6 @@ $(document).ready(function(){
 	socket.on('count_updated', function(data) {
 		number_count = data;
 		
-		console.log(number_count);
-		
 		numAnim.update(number_count);
 	});
 	
