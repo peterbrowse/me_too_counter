@@ -4,6 +4,24 @@ html
 		title= title
 		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0")
+		
+		meta(name="twitter:card", content="summary_large_image")
+		meta(name="twitter:site", content="@MeTooThreeFour")
+		meta(name="twitter:creator", content="@MeTooThreeFour")
+		meta(name="twitter:title", content="Me Too Three Four")
+		meta(name="twitter:description", content="")
+		meta(name="twitter:image", content"http://metoothreefour.com/imgs/.jpg")
+		
+		meta(property="og:title", content="Me Too Three Four")
+		meta(property="og:type", content="website")
+		meta(property="og:url", content="http://metoothreefour.com/")
+		meta(property="og:image", content="http://metoothreefour.com/imgs/summer_is_gone_opengraph.jpg")
+		meta(property="og:site_name", content="Me Too Three Four")
+		meta(property="og:description", content="")
+		meta(property="fb:app_id", content="127196214651111")
+		
+		meta(name="description", content="")
+		meta(name="keywords", content="")
 				
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		
@@ -43,15 +61,26 @@ html
 
 						p Help us show how big this is.<br />Big in size, big in importance, big in typeface.<br />Srsly, look how big we’ve made it down there.<br />Please click below if you identify as a woman and would like to be counted as a human being that has been sexually harassed or assaulted.
 
-						p (It’s all anonymous. We got you ✌️.)<br />P.s We know there’s a *mega* flaw because anybody can click this button. We’re counting on your honesty.
-
-				
-					section.count__holder
-						p#count__number 0
+						p (It’s all anonymous. We got you ✌️.)<br />P.s We know there’s a *mega* flaw because anybody can click this button.<br />We’re counting on your honesty.
 					
 					section.count__button
 						p#count__button_copy Say #metoo too.
-			
+				
+					section.count__holder
+						p#count__number 0
+						
+					section.count__social
+						section.count__social_button_holder
+							section.count__social_button
+								a(href="http://twitter.com/intent/tweet/?text=%23SummerisGone%20by%20%40BlondeBill%20-%20Hear%20a%20unique%20version%20of%20the%20album%20depending%20on%20the%20time%20and%20your%20location%20http%3A%2F%2Fsummerisgone.live" target="_blank" class="share_button share_button__twitter")
+									img(src="imgs/twitter_icon.png")
+							
+							
+						section.count__social_button_holder
+							section.count__social_button
+								a(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.summerisgone.live&src=sdkpreparse" target="_blank" class="share_button share_button__facebook")
+									img(src="imgs/facebook_icon.png")
+							
 			section.container__inner.sub
 			
 				section.count

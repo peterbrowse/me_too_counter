@@ -8,7 +8,9 @@ $off-color: #c867af;
 //TEXT
 $font-colour: $first-color;
 $font-weight: 700;
-$header-font-size: 28px;
+$header-font-size: 160px;
+$copy-font-size: 18px;
+$button-font-size: 30px;
 
 $outter-spacing: 20px;
 
@@ -24,6 +26,12 @@ section.container {
 	width: 100%;
 	
 	.container__inner {
+		.count__button {
+			margin: auto;
+			text-align: center;
+			margin-bottom: $outter-spacing * 2;
+		}
+		
 		#count__button_copy.off{
 			background-color: $off-color;
 			-webkit-transition: background-color 300ms linear;
@@ -35,7 +43,7 @@ section.container {
 		#count__button_copy {
 			display: inline-block;
 			margin: auto;
-			padding: $outter-spacing;
+			padding: $outter-spacing + ($outter-spacing / 2);
 			background-color: $second-color;
 			color: $third-color;
 			cursor: pointer;
@@ -45,14 +53,68 @@ section.container {
 			-moz-user-select: none;
 			-ms-user-select: none;
             user-select: none;
+            font-size: $button-font-size;
+            font-weight: $font-weight;
+		}
+		
+		.count__copy {
+			text-align: center;
+			
+			margin-top: $outter-spacing * 4;
+			
+			p {
+				max-width:800px;
+				text-align: center;
+				color: $third-color;
+				font-size: $copy-font-size;
+				margin-bottom: $outter-spacing;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			p:last-child {
+				margin-bottom: $outter-spacing * 2;
+			}
+		}
+		
+		.count__holder {
+			text-align: center;
+			p {
+				color: $second-color;
+				font-size: $header-font-size;
+				font-weight: 900;
+				letter-spacing: 1px;
+			}
+		}
+		
+		.count__social {
+			margin-top: $outter-spacing * 3;
+			text-align: center;
+			
+			.count__social_button_holder {
+				display: inline-block;
+				
+				.share_button__twitter {
+					margin-right: $outter-spacing / 2;
+				}
+				
+				.share_button__facebook {
+					margin-left: $outter-spacing / 2;
+				}
+				
+				img {
+					max-width: 40px;
+				}
+			}
 		}
 	}
 	
 	.container__inner.sub {
+		margin-top: $outter-spacing * 4;
 		background-color: $second-color;
 	}
 	
 	.count {
-		margin: $outter-spacing;
+		margin: $outter-spacing $outter-spacing 0 $outter-spacing;
 	}
 }
