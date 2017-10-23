@@ -36,11 +36,13 @@ $(document).ready(function(){
 	
 	$('#count__button_copy').on('click', function(){
 		socket.emit('button_pressed');
-		$('#count__button_copy').off('click').text("Thank you.").addClass('off');
+		$('#count__button_copy').off('click').text("💪").addClass('off');
+		$('#count__button_after_click').show();
 	});
 	
 	if(Cookies.get('has_user_clicked')) {
-		$('#count__button_copy').text("Thank you.").addClass('off').off('click');
+		$('#count__button_copy').text("💪").addClass('off').off('click');
+		$('#count__button_after_click').show();
 	}
 });
 

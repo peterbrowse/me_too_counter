@@ -4,13 +4,14 @@ $first-color: #7dfab2;
 $second-color: #ee8ad4;
 $third-color: #ffffff;
 $off-color: #c867af;
+$black-color: #000000;
 
 //TEXT
 $font-colour: $first-color;
 $font-weight: 700;
 $header-font-size: 160px;
-$copy-font-size: 18px;
-$button-font-size: 30px;
+$copy-font-size: 16px;
+$button-font-size: 28px;
 
 $outter-spacing: 20px;
 
@@ -26,10 +27,14 @@ section.container {
 	width: 100%;
 	
 	.container__inner {
+		#count_section {
+			background-color: $third-color;
+			margin-bottom: $outter-spacing;
+		} 
+		
 		.count__button {
 			margin: auto;
 			text-align: center;
-			margin-bottom: $outter-spacing * 2;
 		}
 		
 		#count__button_copy.off{
@@ -37,6 +42,9 @@ section.container {
 			-webkit-transition: background-color 300ms linear;
 			-ms-transition: background-color 300ms linear;
 			transition: background-color 300ms linear;
+			-webkit-transition: width 300ms linear;
+			-ms-transition: width 300ms linear;
+			transition: width 300ms linear;
 			cursor: default;
 		}
 		
@@ -55,22 +63,46 @@ section.container {
             user-select: none;
             font-size: $button-font-size;
             font-weight: $font-weight;
+            
+            @media (max-width: 480px) {
+				font-size: $button-font-size - 8;
+				line-height: ($button-font-size - 8) + 6;
+				padding: $outter-spacing;	
+			}
+		}
+		
+		#count__button_after_click {
+			display: none;
+			line-height: $copy-font-size + 6;
+			font-size: $copy-font-size;
+			margin-top: $outter-spacing;
+			
+			@media (max-width: 480px) {
+				font-size: $copy-font-size - 4;
+				line-height: ($copy-font-size - 4) + 6;	
+			}
 		}
 		
 		.count__copy {
 			text-align: center;
-			
-			margin-top: $outter-spacing * 4;
+			margin-top: $outter-spacing * 2;
 			
 			p {
 				max-width:800px;
+				padding-left: $outter-spacing;
+				padding-right: $outter-spacing;
 				text-align: center;
-				color: $third-color;
+				color: $black-color;
 				font-size: $copy-font-size;
 				margin-bottom: $outter-spacing;
 				margin-left: auto;
 				margin-right: auto;
 				line-height: $copy-font-size + 6;
+				
+				@media (max-width: 480px) {
+					font-size: $copy-font-size - 4;
+					line-height: ($copy-font-size - 4) + 6;
+				}
 			}
 			
 			p:last-child {
@@ -80,27 +112,39 @@ section.container {
 		
 		.count__holder {
 			text-align: center;
+			margin-bottom: $outter-spacing * 2;
+			padding-top: $outter-spacing * 4;
+			
 			p {
 				color: $second-color;
 				font-size: $header-font-size;
 				font-weight: 900;
 				letter-spacing: 1px;
+				
+				@media (max-width: 600px) and (min-width: 481px) {
+					font-size: $header-font-size - 60;	
+				}
+				
+				@media (max-width: 480px) {
+					font-size: $header-font-size - 100;	
+				}
 			}
 		}
 		
 		.count__social {
-			margin-top: $outter-spacing * 3;
+			margin-top: $outter-spacing * 2;
+			padding-bottom: $outter-spacing * 2;
 			text-align: center;
 			
 			.count__social_button_holder {
 				display: inline-block;
 				
 				.share_button__twitter {
-					margin-right: $outter-spacing / 2;
+					margin-right: $outter-spacing;
 				}
 				
 				.share_button__facebook {
-					margin-left: $outter-spacing / 2;
+					margin-left: $outter-spacing;
 				}
 				
 				img {
@@ -111,8 +155,83 @@ section.container {
 	}
 	
 	.container__inner.sub {
-		margin-top: $outter-spacing * 4;
 		background-color: $second-color;
+		
+		.copy_container {
+			max-width: 800px;
+			margin: auto;
+			padding: $outter-spacing * 3 $outter-spacing * 2;
+			
+			@media (max-width: 480px) {
+				padding: $outter-spacing * 2 $outter-spacing;	
+			}
+			
+			p, a, li, h3 {
+				color: $third-color;
+			}
+			
+			p, h3 {
+				font-size: $copy-font-size;
+				line-height: $copy-font-size + 6;
+				
+				@media (max-width: 480px) {
+					font-size: $copy-font-size - 4;
+					line-height: ($copy-font-size - 4) + 6;	
+				}
+			}
+			
+			a, li {
+				font-size: $copy-font-size - 3;
+				line-height: ($copy-font-size - 3) + 6;
+				
+				@media (max-width: 480px) {
+					font-size: $copy-font-size - 4;
+					line-height: ($copy-font-size - 4) + 6;	
+				}
+			}
+			
+			p {
+				text-align: center;
+			}
+			
+			h3 {
+				margin-bottom: $outter-spacing / 2;
+			}
+			
+			li {
+				margin-bottom: $outter-spacing;
+			}
+			
+			.copy_container__full {
+				margin-bottom: $outter-spacing * 2;
+			}
+			
+			.copy_container__half {
+				width: 50%;
+				display: inline-block;
+				vertical-align: top;
+				
+				@media (max-width: 480px) {
+					width: 100%;
+				}
+			}
+			
+			#forwomen li {
+				padding-right: $outter-spacing / 2;
+				
+				@media (max-width: 480px) {
+					padding-right: 0;	
+				}
+			}
+			
+			#formen li, #formen h3 {
+				padding-left: $outter-spacing / 2;
+				
+				@media (max-width: 480px) {
+					padding-left: 0;	
+				}
+			}
+		}
 	}
 	
 	.count {
