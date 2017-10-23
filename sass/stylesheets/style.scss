@@ -76,6 +76,7 @@ section.container {
 			line-height: $copy-font-size + 6;
 			font-size: $copy-font-size;
 			margin-top: $outter-spacing;
+			font-weight: 900;
 			
 			@media (max-width: 480px) {
 				font-size: $copy-font-size - 4;
