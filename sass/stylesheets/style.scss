@@ -120,7 +120,6 @@ section.container {
 				color: $second-color;
 				font-size: $header-font-size;
 				font-weight: 900;
-				letter-spacing: 1px;
 				
 				@media (max-width: 600px) and (min-width: 481px) {
 					font-size: $header-font-size - 60;	
