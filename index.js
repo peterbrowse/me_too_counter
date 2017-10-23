@@ -28,7 +28,7 @@ var current_count = 0;
 
 //Setup App
 if ('development' == app.get('env')) {
-	app.locals.pretty = false;
+	app.locals.pretty = true;
 	app.use(sassMiddleware({
 		debug: true,
 		src: __dirname + '/sass',
@@ -70,7 +70,10 @@ googleAuth.authorize()
             }
             var results = response.values[0][0];
             current_count = results;
-            console.log("Current count stands at: " + results);
+            
+            if ('development' == app.get('env')) {
+            	console.log("Current count stands at: " + results);
+            }
 
 			setInterval(count_db_update, 1000*10);
         });
@@ -95,7 +98,9 @@ function count_db_update() {
 		    if(err) {
 			    console.log(err);
 		    } else {
-			    console.log('Count stands at %d.', body.values);
+			    if ('development' == app.get('env')) {
+			    	console.log('Count stands at %d.', body.values);
+			    }
 		    }
         });
 	});
