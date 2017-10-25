@@ -168,6 +168,8 @@ section.container {
 			margin: auto;
 			padding: $outter-spacing * 3 $outter-spacing * 2;
 			
+			text-align: center;
+			
 			@media (max-width: 480px) {
 				padding: $outter-spacing * 2 $outter-spacing;	
 			}
@@ -224,44 +226,81 @@ section.container {
 				@media (max-width: 480px) {
 					width: 100%;
 				}
+				
+				#forhumans li, #forhumans h3 {
+					padding-right: $outter-spacing / 4;
+					
+					@media (max-width: 600px) and (min-width: 481px) {
+						padding-right: $outter-spacing / 2;	
+					}
+					
+					@media (max-width: 480px) {
+						padding-right: 0;	
+					}
+				}
+				
+				
+				#forwomen li, #forwomen h3 {
+					padding-left: $outter-spacing / 4;
+					padding-right: $outter-spacing / 4;
+					
+					@media (max-width: 600px) and (min-width: 481px) {
+						padding-left: $outter-spacing / 2;	
+					}
+					
+					@media (max-width: 480px) {
+						padding-right: 0;
+						padding-left: 0;	
+					}
+				}
+				
+				#formen li, #formen h3 {
+					padding-left: $outter-spacing / 4;
+					
+					@media (max-width: 600px) and (min-width: 481px) {
+						padding-left: 0;	
+					}
+					
+					@media (max-width: 480px) {
+						padding-left: 0;	
+					}
+				}
 			}
 			
-			#forhumans li, #forhumans h3 {
-				padding-right: $outter-spacing / 4;
+			.copy_container__quarter {
+				width: 23%;
+				display: inline-block;
+				vertical-align: top;
 				
-				@media (max-width: 600px) and (min-width: 481px) {
-					padding-right: $outter-spacing / 2;	
+				text-align: left;
+				
+				.copy_container__quarter {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+				
+				.copy_container__quarter:first-child {
+					margin-left: 0;
+				}
+				
+				.copy_container__quarter:last-child {
+					margin-right: 0
+				}
+				
+				@media (max-width: 700px) and (min-width: 481px) {
+					width: 48%;
+					
+					.copy_container__quarter {
+						margin: 0;
+					}
 				}
 				
 				@media (max-width: 480px) {
-					padding-right: 0;	
-				}
-			}
-			
-			
-			#forwomen li, #forwomen h3 {
-				padding-left: $outter-spacing / 4;
-				padding-right: $outter-spacing / 4;
-				
-				@media (max-width: 600px) and (min-width: 481px) {
-					padding-left: $outter-spacing / 2;	
-				}
-				
-				@media (max-width: 480px) {
-					padding-right: 0;
-					padding-left: 0;	
-				}
-			}
-			
-			#formen li, #formen h3 {
-				padding-left: $outter-spacing / 4;
-				
-				@media (max-width: 600px) and (min-width: 481px) {
-					padding-left: 0;	
-				}
-				
-				@media (max-width: 480px) {
-					padding-left: 0;	
+					width: 100%;	
+					
+					.copy_container__quarter {
+						margin: 0;
+					}
 				}
 			}
 			
