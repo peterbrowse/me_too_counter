@@ -25,7 +25,7 @@ $(document).ready(function(){
 	
 	socket.on('count_accepted', function(){
 		//button
-		Cookies.set('has_user_clicked', true);
+		Cookies.set('has_user_clicked', true, { expires: 3650 });
 	});
 	
 	socket.on('count_updated', function(data) {
@@ -43,6 +43,7 @@ $(document).ready(function(){
 	if(Cookies.get('has_user_clicked')) {
 		$('#count__button_copy').text("💪").addClass('off').off('click');
 		$('#count__button_after_click').show();
+		Cookies.set('has_user_clicked', true, { expires: 3650 });
 	}
 });
 
